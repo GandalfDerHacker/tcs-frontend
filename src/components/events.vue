@@ -63,6 +63,8 @@
     width: 200px;
     margin: 20px;
     width: auto;
+    background: url("../assets/stuhl.jpg");
+
   }
   .date{
     width: 200px;
@@ -70,6 +72,16 @@
     length: 200px;
     font-family: 'Quicksand', sans-serif;
     font-size: large;
+    font-weight: bold;
   }
+
+  .card-text {
+    font-weight: bold;
+  }
+
+  h5 {
+    font-weight: bold;
+  }
+
 
 </style>
