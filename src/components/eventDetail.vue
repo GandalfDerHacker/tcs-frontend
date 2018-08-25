@@ -5,11 +5,11 @@
       Game ID: {{$route.params.id}}
     </div>
     <div class="eventWrapper">
-      <div class="card" v-for="event in events" style="width: 18rem;">
+      <div class="card" v-for="ticket in tickets" style="width: 18rem;">
         <img class="card-img-top" src="../assets/station.jpg" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">{{event.name}}</h5>
-          <p class="card-text">Free tickets: {{event.freeTickets}}</p>
+          <h5 class="card-title">{{ticket.owner}}</h5>
+          <p class="card-text">Position: {{ticket.position}}</p>
           <a href="#" class="btn btn-secondary">Get Ticket!</a>
         </div>
       </div>
@@ -28,6 +28,7 @@
     data() {
       return {
         game: {},
+        tickets: [],
         events: [
           {
             name: "YBvsFCL",
@@ -54,9 +55,12 @@
       loadTickets() {
         this.$http.get('http://localhost:3000/ticket')
           .then(response => {
-            this.selectedField = response.body;
+            this.tickets = response.body;
           });
       }
+    },
+    beforeMount() {
+      this.loadTickets();
     }
   }
 </script>
