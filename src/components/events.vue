@@ -6,8 +6,9 @@
       <div class="col">
         <div class="eventWrapper">
           <div class="card" v-for="event in events">
-            <div class="date">{{event.date}}</div>
+            <div class="date"><h2>{{event.date}}</h2></div>
             <div class="card-body">
+              <img src="" alt="">
               <h5 class="card-title">{{event.name}}</h5>
               <p class="card-text">Free tickets: {{event.freeTickets}}</p>
               <a href="#" class="btn btn-secondary">Get Ticket!</a>
@@ -63,24 +64,25 @@
     width: 200px;
     margin: 20px;
     width: auto;
-    background: url("../assets/stuhl.jpg");
+    /*ckground: url("../assets/stuhl.jpg");*/
 
   }
   .date{
-    width: 200px;
+    width: auto;
     margin: 20px;
     length: 200px;
-    font-family: 'Quicksand', sans-serif;
-    font-size: large;
-    font-weight: bold;
+    border-bottom-style: double;
   }
 
   .card-text {
     font-weight: bold;
   }
 
-  h5 {
+  h2 {
     font-weight: bold;
+    float: left;
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
   }
 
 

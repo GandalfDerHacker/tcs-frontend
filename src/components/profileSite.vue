@@ -2,7 +2,7 @@
   <div class="profileSite">
     <navbar></navbar>
     <div class="eventWrapper">
-      <div class="card"  v-for="event in events" style="width: 18rem;">
+      <div class="card"  v-for="event in events" style="width: 20rem;">
         <img class="card-img-top" src="../assets/station.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{event.name}}</h5>
@@ -28,6 +28,7 @@
           {
             name: "Buy a Card",
             info: "Here You can buy your ticket for an event"
+
           },
           {
             name: "Sell a Card",
@@ -50,6 +51,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px
+  }
+
+  .card{
+    margin: 20px;
   }
 
 </style>
