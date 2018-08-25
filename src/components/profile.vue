@@ -1,19 +1,18 @@
 <template>
   <div class="profile">
     <navbar></navbar>
-    <div class="eventWrapper" v-for="ticket in tickets">
-      {{ticket.name}}
-    </div>
+    <user></user>
   </div>
 </template>
 
 <script>
   import Navbar from './navbar';
+  import User from './user';
 
   export default {
     name: 'profile',
     components: {
-      Navbar
+      Navbar, User
     },
     data() {
       return {

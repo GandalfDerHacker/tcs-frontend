@@ -11,7 +11,7 @@
               <img src="" alt="">
               <h5 class="card-title">{{event.name}}</h5>
               <p class="card-text">Free tickets: {{event.tickets}}</p>
-              <a href="#" class="btn btn-secondary">Get Ticket!</a>
+              <a href="#" class="btn btn-secondary" v-on:click="$router.push({path: '/event/1'});">Get Ticket!</a>
             </div>
           </div>
         </div>
