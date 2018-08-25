@@ -10,7 +10,7 @@
             <div class="card-body">
               <img src="" alt="">
               <h5 class="card-title">{{event.name}}</h5>
-              <p class="card-text">Free tickets: {{event.freeTickets}}</p>
+              <p class="card-text">Free tickets: {{event.tickets}}</p>
               <a href="#" class="btn btn-secondary">Get Ticket!</a>
             </div>
           </div>
@@ -29,25 +29,19 @@
     },
     data() {
       return {
-        events: [
-          {
-            date: "12.September 1990",
-            name: "YBvsFCL",
-            freeTickets: 2
-          },
-          {
-            date: "11. November 1990",
-            name: "ZimiVSChrisi",
-            freeTickets: 4
-          },
-          {
-            date: "12.Dezember 1990",
-            name: "AvsB",
-            freeTickets: 6
-          }
-        ]
+        events:[],
       }
-
+    },
+    methods: {
+      loadGames() {
+        this.$http.get('http://localhost:3000/game')
+          .then(response => {
+            this.events = response.body;
+          });
+      }
+    },
+    beforeMount() {
+      this.loadGames();
     }
   }
 </script>

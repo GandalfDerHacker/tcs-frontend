@@ -6,13 +6,13 @@
     </div>
     <ul class="nav justify-content-end">
       <li class="nav-item">
-        <a class="nav-link active" href="#" v-on:click="$router.push({path: '/'});">Events</a>
+        <a class="nav-link" href="#" v-on:click="$router.push({path: '/'});">Overview</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#" v-on:click="$router.push({path: '/events'});">Events</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" v-on:click="$router.push({path: '/profile'});">My Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" v-on:click="$router.push({path: '/profileSite'});">My ProfileSite</a>
       </li>
     </ul>
   </div>

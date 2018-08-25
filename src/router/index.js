@@ -12,7 +12,7 @@ export default new Router({
   base: __dirname,
   routes: [
     {
-      path: '/',
+      path: '/events',
       name: 'Events',
       component: Events
     },
@@ -26,7 +26,8 @@ export default new Router({
       name: 'EventDetail',
       component: EventDetail
     },
-      path: '/profileSite',
+    {
+      path: '/',
       name: 'ProfileSite',
       component: ProfileSite
     }
