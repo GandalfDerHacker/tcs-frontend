@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Profile from '../components/profile'
 import Events from '../components/events'
+import EventDetail from '../components/eventDetail'
 import ProfileSite from '../components/profileSite'
 
 Vue.use(Router);
@@ -21,6 +22,10 @@ export default new Router({
       component: Profile
     },
     {
+      path: '/event/:id',
+      name: 'EventDetail',
+      component: EventDetail
+    },
       path: '/profileSite',
       name: 'ProfileSite',
       component: ProfileSite
