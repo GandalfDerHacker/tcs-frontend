@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="logo-container">
       <img height="50" src="../assets/tcs_logo.png">
-      <div>TCS Saisonticket Market</div>
+      <div> <h1>TCS Saisonticket Market</h1></div>
     </div>
     <ul class="nav justify-content-end">
       <li class="nav-item">
@@ -10,6 +10,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" v-on:click="$router.push({path: '/profile'});">My Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" v-on:click="$router.push({path: '/profileSite'});">My ProfileSite</a>
       </li>
     </ul>
   </div>
@@ -28,9 +31,13 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .navbar{
-    background-color: rgb(204, 206, 183);
+    background-color: rgb(36, 52, 85);
   }
   .logo-container{
     display: inline;
+  }
+  h1 {
+    font-size: 1em;
+    color: white;
   }
 </style>
