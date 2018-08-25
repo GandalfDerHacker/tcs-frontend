@@ -2,11 +2,11 @@
   <div class="eventDetail">
     <navbar></navbar>
     <div>
-      Game ID: {{$route.params.id}}
+      Event ID: {{$route.params.id}}
     </div>
     <div class="eventWrapper">
       <div class="card" v-for="ticket in tickets" style="width: 18rem;">
-        <img class="card-img-top" src="../assets/station.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../assets/ticket.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{ticket.owner}}</h5>
           <p class="card-text">Position: {{ticket.position}}</p>
@@ -29,20 +29,6 @@
       return {
         game: {},
         tickets: [],
-        events: [
-          {
-            name: "YBvsFCL",
-            freeTickets: 2
-          },
-          {
-            name: "ZimiVSChrisi",
-            freeTickets: 4
-          },
-          {
-            name: "AvsB",
-            freeTickets: 6
-          }
-        ]
       }
     },
     methods: {
@@ -72,5 +58,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px
+  }
+  .card {
+    margin: 10px;
   }
 </style>
