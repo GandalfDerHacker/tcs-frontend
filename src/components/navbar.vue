@@ -11,6 +11,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#" v-on:click="$router.push({path: '/profile'});">My Profile</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" v-on:click="$router.push({path: '/profileSite'});">My ProfileSite</a>
+      </li>
     </ul>
   </div>
 </template>
